@@ -78,7 +78,7 @@
         <!-- Contenedor de Puntuación Final -->
         <div id="score-container" class="hidden text-center">
             <h2 class="text-4xl font-bold text-white mb-4">¡Prueba Completada!</h2>
-            <p id="score-text" class="text-2xl text-gray-300 mb-8">Tu puntuación final es: 30 de 39</p>
+            <p id="score-text" class="text-2xl text-gray-300 mb-8">Tu puntuación final es: 0 de 39</p>
             <button id="restart-button" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
                 Volver a Intentar
             </button>
@@ -88,7 +88,7 @@
 
     <script>
         const questions = [
-            // --- INICIO DE LA BASE DE DATOS DE PREGUNTAS ---
+            // --- INICIO DE LA BASE DE DATOS DE PREGUNTAS (VERSIÓN 2) ---
             {
                 question: "1. ¿Cuál de las siguientes estructuras contiene núcleos vitales para la regulación cardiovascular y respiratoria, y marca la transición entre la médula espinal y el encéfalo?",
                 options: ["A) Cerebelo", "B) Bulbo raquídeo", "C) Protuberancia", "D) Mesencéfalo", "E) Diencéfalo"],
@@ -96,16 +96,16 @@
                 justification: "El bulbo raquídeo (o médula oblongada) contiene centros vitales como el centro cardiovascular, que regula la frecuencia cardíaca y la presión arterial, y el área rítmica bulbar, que controla el ritmo básico de la respiración."
             },
             {
-                question: "2. Una lesión a nivel de las raíces espinales C3-C5 puede comprometer la función del diafragma y causar paro respiratorio. ¿Qué nervio y qué plexo están directamente implicados en este escenario clínico?",
-                options: ["A) Nervio Axilar, proveniente del plexo cervical.", "B) Nervio Frénico, proveniente del plexo braquial.", "C) Nervio Ciático, proveniente del plexo sacro.", "D) Nervio Frénico, proveniente del plexo cervical.", "E) Nervio Intercostal, proveniente del plexo cervical."],
-                correctAnswer: 3,
-                justification: "El nervio frénico, que inerva el diafragma (músculo principal de la respiración), se origina en el plexo cervical, específicamente de las raíces C3, C4 y C5. Una lesión en este nivel puede paralizar el diafragma."
+                question: "2. Un paciente presenta \"mano en garra\", una condición caracterizada por hiperextensión de las articulaciones metacarpofalángicas y flexión de las interfalángicas. Esta condición clínica es indicativa de una lesión en:",
+                options: ["A) El nervio Mediano, proveniente del plexo braquial.", "B) El nervio Radial, proveniente del plexo braquial.", "C) El nervio Cubital, proveniente del plexo braquial.", "D) El nervio Axilar, proveniente del plexo cervical.", "E) El nervio Femoral, proveniente del plexo lumbar."],
+                correctAnswer: 2,
+                justification: "La \"mano en garra\" es un signo clásico de lesión del nervio cubital (ulnar). Este nervio inerva músculos intrínsecos de la mano que permiten la flexión de las articulaciones metacarpofalángicas y la extensión de las interfalángicas. Su lesión provoca el desequilibrio opuesto."
             },
             {
                 question: "3. La capacidad de un individuo para permanecer alerta y orientado, filtrando estímulos sensoriales irrelevantes, es una función primordial del:",
-                options: ["A) El hipotálamo, que es el regulador central de los ciclos de sueño-vigilia.", "B) El núcleo gustativo del bulbo, que procesa la información del sabor.", "C) El cerebelo, que se encarga de coordinar la actividad sensorial entrante.", "D) El sistema activador reticular ascendente (SARA) que mantiene la conciencia.", "E) El lóbulo floculonodular del cerebelo, que controla el equilibrio."],
+                options: ["A) El hipotálamo, que es el regulador central de los ciclos de sueño-vigilia.", "B) El núcleo gustativo del bulbo, que procesa la información del sabor.", "C) El cerebelo, que se encarga de coordinar la actividad sensorial entrante.", "D) La formación reticular, que es la responsable de mantener el estado de conciencia.", "E) El lóbulo floculonodular del cerebelo, que controla el equilibrio."],
                 correctAnswer: 3,
-                justification: "El Sistema Activador Reticular Ascendente (SARA), parte de la formación reticular, es crucial para mantener la conciencia y el estado de alerta. Filtra los estímulos sensoriales y despierta a la corteza cerebral."
+                justification: "La formación reticular, a través de su Sistema Activador Reticular Ascendente (SARA), es crucial para mantener la conciencia, el estado de alerta y el despertar del sueño, filtrando estímulos irrelevantes."
             },
             {
                 question: "4. ¿Cuál de las siguientes meninges forma los ligamentos dentados que estabilizan lateralmente la médula espinal?",
@@ -120,16 +120,16 @@
                 justification: "La secreción glandular (como la saliva) es una función visceral involuntaria, regulada por el Sistema Nervioso Autónomo (SNA), específicamente por su división parasimpática en este caso."
             },
             {
-                question: "6. ¿Cuál de las siguientes combinaciones de estructuras es fundamental para constituir la barrera hematoencefálica (BHE), regulando el paso de sustancias al tejido encefálico?",
-                options: ["A) Células de Schwann, nodos de Ranvier y el endoneuro de los nervios periféricos.", "B) Microglia, oligodendrocitos y la membrana piamadre.", "C) Células ependimarias, uniones estrechas y plexos coroideos.", "D) Vellosidades aracnoideas, senos venosos durales y el espacio subaracnoideo.", "E) Células endoteliales con uniones estrechas, membrana basal gruesa y prolongaciones de astrocitos."],
+                question: "6. Para que una molécula de glucosa pueda ser utilizada como fuente de energía por una neurona, debe atravesar la barrera hematoencefálica (BHE) desde un capilar sanguíneo. ¿Cuál es la secuencia correcta de estructuras que debe cruzar para ingresar al tejido encefálico?",
+                options: ["A) Las células de Schwann del nervio periférico, el perineuro y finalmente el epineuro del nervio.", "B) Los oligodendrocitos que forman la vaina de mielina, y posteriormente las células de la microglia.", "C) Las células ependimarias del plexo coroideo, el líquido cefalorraquídeo y las vellosidades aracnoideas.", "D) La piamadre, el espacio subaracnoideo y finalmente la membrana aracnoides que rodea el encéfalo.", "E) Las células endoteliales del capilar, su membrana basal gruesa y las prolongaciones de los astrocitos."],
                 correctAnswer: 4,
-                justification: "La BHE está formada por tres componentes clave: 1) Las uniones estrechas (tight junctions) entre las células endoteliales de los capilares, 2) una membrana basal gruesa, y 3) los pies perivasculares de los astrocitos, que refuerzan la barrera."
+                justification: "La BHE está formada por: 1) Las células endoteliales (unidas por uniones estrechas), 2) la membrana basal de estas células, y 3) los pies perivasculares de los astrocitos. La glucosa usa transportadores específicos (GLUT) para cruzarla."
             },
             {
-                question: "7. Un individuo gira instintivamente la cabeza y los ojos para seguir un objeto que se mueve rápidamente en su campo visual. Este reflejo está mediado por:",
-                options: ["A) El núcleo olivar inferior para el aprendizaje motor.", "B) La sustancia negra para el control del movimiento.", "C) Los núcleos rojos para la coordinación muscular.", "D) Los coliculos superiores como centro de reflejo visual.", "E) Los colículos inferiores como centro auditivo."],
+                question: "7. Un individuo gira instintivamente la cabeza y los ojos para seguir un objeto que se mueve rápidamente en su campo visual. Este reflejo está mediado por centros nerviosos localizados en:",
+                options: ["A) El cerebelo", "B) El bulbo raquídeo", "C) La protuberancia", "D) El mesencéfalo", "E) La médula espinal"],
                 correctAnswer: 3,
-                justification: "Los colículos superiores (o tubérculos cuadrigéminos superiores) en el mesencéfalo son centros de reflejos visuales que coordinan los movimientos de la cabeza, ojos y tronco en respuesta a estímulos visuales."
+                justification: "Los colículos superiores (o tubérculos cuadrigéminos superiores), localizados en el techo (tectum) del mesencéfalo, son los centros principales para los reflejos de seguimiento visual y movimientos oculares sacádicos."
             },
             {
                 question: "8. En un arco reflejo, la sinapsis entre la neurona sensitiva y la neurona motora ocurre en:",
@@ -138,22 +138,22 @@
                 justification: "El centro integrador (generalmente la sustancia gris de la médula espinal o el tronco encefálico) es donde la neurona sensitiva transmite la señal, ya sea directamente a la neurona motora (reflejo monosináptico) o a través de una interneurona (polisináptico)."
             },
             {
-                question: "9. La tienda del cerebelo es una de las tres extensiones de las meninges craneales. ¿A qué meninge corresponde esta estructura y cuál es su función principal?",
-                options: ["A) Es una extensión de la aracnoides y su función es separar los hemisferios cerebelosos.", "B) Es una extensión de la piamadre y su función es anclar el encéfalo al cráneo.", "C) Es una extensión de la duramadre y su función es separar los dos hemisferios del cerebelo.", "D) Es una extensión de la piamadre y su función es separar los hemisferios cerebrales.", "E) Es una extensión de la duramadre y su función es separar el cerebro del cerebelo."],
-                correctAnswer: 4,
-                justification: "La tienda del cerebelo (tentorium cerebelli) es un pliegue de la duramadre (capa meníngea) que se extiende horizontalmente y separa los lóbulos occipitales del cerebro del cerebelo."
-            },
-            {
-                question: "10. Al describir la relación entre estructuras, los anatomistas utilizan planos de referencia. ¿Qué plano anatómico divide el cuerpo en una porción anterior (frontal) y una posterior (dorsal)?",
-                options: ["A) Plano transversal", "B) Plano oblicuo", "C) Plano sagital", "D) Plano frontal (coronal)", "E) Plano medio"],
+                question: "9. La hoz del cerebelo es una extensión de una de las meninges craneales. ¿A qué meninge corresponde y cuál es su función principal?",
+                options: ["A) Es una extensión de la duramadre y su función es separar el cerebro del cerebelo.", "B) Es una extensión de la piamadre y su función es anclar el encéfalo al cráneo.", "C) Es una extensión de la aracnoides y su función es separar los hemisferios cerebelosos.", "D) Es una extensión de la duramadre y su función es separar los dos hemisferios del cerebelo.", "E) Es una extensión de la piamadre y su función es separar los hemisferios cerebrales."],
                 correctAnswer: 3,
-                justification: "El plano frontal, también llamado coronal, es un plano vertical que divide el cuerpo o una estructura en una parte anterior (ventral) y una parte posterior (dorsal)."
+                justification: "La hoz del cerebelo (falx cerebelli) es un pliegue de la duramadre (capa meníngea) que se proyecta en la cisura posterior entre los dos hemisferios cerebelosos."
             },
             {
-                question: "11. La diferencia fundamental entre la mielinización en el SNC y el SNP radica en que:",
-                options: ["A) En el SNC, un oligodendrocito mieliniza varios axones; en el SNP, una célula de Schwann mieliniza un único axón.", "B) El neurolema, crucial para la regeneración, se encuentra exclusivamente rodeando los axones del SNC.", "C) Los astrocitos en el SNC y las células satélite en el SNP son las encargadas directas de formar la mielina.", "D) En el SNP, cada oligodendrocito mieliniza un axón; en el SNC, una célula de Schwann mieliniza varios.", "E) La vaina de mielina en el SNP carece de neurolema, a diferencia de la vaina presente en el SNC."],
-                correctAnswer: 0,
-                justification: "En el SNC, un solo oligodendrocito emite prolongaciones para mielinizar segmentos de *varios* axones. En el SNP, una célula de Schwann se envuelve alrededor de un solo segmento de *un* axón para formar la mielina."
+                question: "10. Un radiólogo necesita obtener una imagen que muestre una sección superior e inferior del cerebro. ¿Qué plano anatómico debería utilizar para este tipo de corte?",
+                options: ["A) Plano medio", "B) Plano oblicuo", "C) Plano sagital", "D) Plano transversal (horizontal)", "E) Plano frontal (coronal)"],
+                correctAnswer: 3,
+                justification: "El plano transversal, también llamado horizontal o axial, es el que divide el cuerpo o una estructura en una porción superior y otra inferior, como 'rebanadas'."
+            },
+            {
+                question: "11. Además de proporcionar sostén estructural, ¿cuál es una de las funciones clave de los astrocitos en el Sistema Nervioso Central?",
+                options: ["A) Producir y mantener la vaina de mielina alrededor de múltiples axones.", "B) Fagocitar detritos celulares y microorganismos en caso de lesión.", "C) Tapizar los ventrículos cerebrales y contribuir a la circulación del LCR.", "D) Contribuir a la formación de la barrera hematoencefálica.", "E) Rodear los cuerpos neuronales en los ganglios del SNP para dar soporte."],
+                correctAnswer: 3,
+                justification: "Los astrocitos, mediante sus 'pies perivasculares', envuelven los capilares sanguíneos del encéfalo y son un componente fundamental para la formación y mantenimiento de la Barrera Hematoencefálica (BHE)."
             },
             {
                 question: "12. En un paciente con esclerosis lateral amiotrófica (ELA), que afecta a las neuronas motoras, ¿en qué región de la sustancia gris medular se observaría la degeneración de los cuerpos celulares que inervan los músculos esqueléticos?",
@@ -162,40 +162,40 @@
                 justification: "Las astas grises anteriores (o ventrales) de la médula espinal contienen los somas (cuerpos celulares) de las neuronas motoras somáticas (motoneuronas inferiores), que son las que degeneran en la ELA."
             },
             {
-                question: "13. Si se realizara una punción lumbar para extraer LCR, la aguja debería atravesar las meninges en un orden específico para llegar al espacio subaracnoideo, que se encuentra entre:",
-                options: ["A) La piamadre y la superficie de la médula espinal.", "B) La membrana aracnoides y la piamadre.", "C) El hueso de la vértebra y la duramadre espinal.", "D) La duramadre espinal y la membrana aracnoides.", "E) El espacio epidural y el espacio subdural."],
-                correctAnswer: 1,
-                justification: "El Líquido Cefalorraquídeo (LCR) circula en el espacio subaracnoideo, el cual está anatómicamente localizado entre la capa meníngea aracnoides (por fuera) y la piamadre (por dentro)."
+                question: "13. Una vez que el líquido cefalorraquídeo (LCR) llega al cuarto ventrículo, ¿a través de qué estructuras sale para circular por el espacio subaracnoideo?",
+                options: ["A) A través de los forámenes interventriculares.", "B) A través de las vellosidades aracnoideas.", "C) A través del acueducto del mesencéfalo.", "D) A través de una apertura media y dos laterales.", "E) A través del conducto central de la médula."],
+                correctAnswer: 3,
+                justification: "El LCR sale del sistema ventricular (específicamente del 4to ventrículo) hacia el espacio subaracnoideo a través de tres orificios: la apertura media (de Magendie) y las dos aperturas laterales (de Luschka)."
             },
             {
-                question: "14. Ante una lesión isquémica en el SNC, ¿qué tipo celular de la neuroglia proliferaría para fagocitar los detritos celulares y el tejido dañado?",
-                options: ["A) Células ependimarias", "B) Células satélite", "C) Microglia", "D) Astrocitos protoplasmáticos", "E) Oligodendrocitos"],
+                question: "14. ¿Cuál es la función principal de los plexos coroideos, localizados en las paredes de los ventrículos cerebrales?",
+                options: ["A) Reabsorber el líquido cefalorraquídeo hacia la circulación venosa.", "B) Servir como el principal centro de relevo para la información sensorial.", "C) Producir la mayor parte del líquido cefalorraquídeo (LCR).", "D) Anclar el cerebro a las meninges para evitar desplazamientos.", "E) Regular el tono muscular y el equilibrio corporal."],
                 correctAnswer: 2,
-                justification: "La microglia son las células inmunitarias residentes del SNC. Actúan como macrófagos, activándose y proliferando para fagocitar restos celulares, patógenos y tejido dañado en respuesta a una lesión."
+                justification: "Los plexos coroideos son redes de capilares sanguíneos cubiertos por células ependimarias modificadas que filtran el plasma sanguíneo para producir la mayor parte del LCR."
             },
             {
-                question: "15. Un paciente sufre una hernia discal que comprime la raíz ventral de un nervio espinal. ¿Qué tipo de déficit se esperaría encontrar?",
-                options: ["A) Un aumento anormal en la respuesta de los reflejos tendinosos profundos.", "B) Una pérdida completa tanto de la función motora como de la sensitiva.", "C) La aparición de dolor referido en una de las vísceras abdominales o pélvicas.", "D) Un déficit motor en los músculos esqueléticos inervados por el nervio.", "E) Una pérdida de la sensibilidad en la zona del dermatoma correspondiente."],
+                question: "15. Un paciente sufre una hernia discal que comprime la raíz dorsal de un nervio espinal. ¿Qué tipo de déficit se esperaría encontrar?",
+                options: ["A) Una pérdida completa tanto de la función motora como de la sensitiva.", "B) La parálisis de los músculos esqueléticos inervados por dicho nervio.", "C) Un déficit motor que afecta la coordinación de movimientos finos.", "D) Una pérdida de la sensibilidad en la zona del dermatoma correspondiente.", "E) La incapacidad para regular la actividad de las glándulas sudoríparas."],
                 correctAnswer: 3,
-                justification: "La raíz ventral (anterior) de un nervio espinal es motora; contiene los axones de las neuronas motoras. Su compresión causará debilidad o parálisis (déficit motor) en los músculos que inerva. La raíz dorsal (posterior) es la sensitiva."
+                justification: "La raíz dorsal (posterior) de un nervio espinal es exclusivamente sensitiva; transporta información aferente. Su compresión causará pérdida de sensibilidad (anestesia) o dolor/parestesias en el dermatoma inervado por esa raíz."
             },
             {
-                question: "16. La parálisis y pérdida de sensibilidad en el lado izquierdo del cuerpo podría ser consecuencia de una lesión en los tractos corticoespinales del lado derecho del encéfalo, debido al fenómeno de:",
-                options: ["A) Plasticidad neuronal", "B) Convergencia sinaptica", "C) Somatotopía", "D) Decusación de las pirámides", "E) Propagación saltatoria"],
-                correctAnswer: 3,
-                justification: "La decusación de las pirámides es el cruce de las fibras motoras (tractos corticoespinales) en el bulbo raquídeo. Esto explica por qué el hemisferio cerebral derecho controla el lado izquierdo del cuerpo, y viceversa."
-            },
-            {
-                question: "17. Durante un potencial de acción, después de la despolarización máxima, la membrana neuronal retorna a su estado de reposo. ¿Qué evento iónico es el principal responsable de esta fase de repolarización?",
-                options: ["A) La inactivación de la bomba Na+/K+ ATPasa, deteniendo el transporte iónico.", "B) La entrada continua de iones de Na+ a través de canales pasivos de fuga.", "C) El cierre de los canales de K+ dependientes de voltaje, impidiendo su salida.", "D) La apertura de canales de K+ dependientes de voltaje, permitiendo su salida de la célula.", "E) La entrada masiva de iones de Cl- a través de canales dependientes de ligando."],
-                correctAnswer: 3,
-                justification: "La repolarización ocurre cuando los canales de Na+ se inactivan y los canales de K+ dependientes de voltaje se abren. La salida masiva de iones positivos de potasio (K+) hace que el interior de la célula vuelva a ser negativo."
-            },
-            {
-                question: "18. ¿Qué tipo de información sensorial es conducida principalmente por los tractos localizados en las columnas blancas posteriores de la médula espinal, como el fascículo grácil y el cuneiforme?",
-                options: ["A) Sensibilidad de dolor, temperatura y tacto grueso.", "B) Reflejos de sobresalto en respuesta a estímulos auditivos.", "C) Tacto discriminativo, vibración y propiocepción consciente.", "D) Impulsos motores voluntarios para los músculos esqueléticos.", "E) Señales motoras autónomas para el músculo liso y las glándulas."],
+                question: "16. La decusación de las pirámides, fenómeno clave para el control motor contralateral del cuerpo, ocurre anatómicamente en:",
+                options: ["A) La protuberancia, conectando los hemisferios cerebelosos.", "B) El mesencéfalo, a nivel de los colículos superiores.", "C) La unión entre el bulbo raquídeo y la médula espinal.", "D) El diencéfalo, específicamente en el tálamo.", "E) La corteza cerebral, en el área motora primaria."],
                 correctAnswer: 2,
-                justification: "Las columnas posteriores (vía dorsal-lemnisco medial) están especializadas en transmitir información de alta fidelidad, como el tacto fino (discriminativo), la sensación de vibración y la propiocepción (percepción de la posición corporal)."
+                justification: "La decusación (cruce) de las pirámides (que son los tractos corticoespinales) ocurre en la porción inferior del bulbo raquídeo, justo en la transición hacia la médula espinal."
+            },
+            {
+                question: "17. ¿Cuál es la principal contribución de la bomba Na+/K+ ATPasa al potencial de membrana de una neurona?",
+                options: ["A) Generar la fase de despolarización rápida del potencial de acción.", "B) Abrir los canales de potasio dependientes de voltaje durante la repolarización.", "C) Contribuir a la negatividad del potencial de reposo mediante transporte activo.", "D) Facilitar la entrada masiva de sodio que desencadena el impulso nervioso.", "E) Cerrar los canales iónicos durante el período refractario absoluto."],
+                correctAnswer: 2,
+                justification: "La bomba Na+/K+ ATPasa es esencial para *mantener* el potencial de membrana en reposo. Lo hace bombeando activamente (con gasto de ATP) 3 iones Na+ hacia afuera por cada 2 iones K+ que introduce, contrarrestando la fuga pasiva de iones."
+            },
+            {
+                question: "18. ¿Qué tipo de información es conducida principalmente por los tractos motores que se localizan en las columnas blancas anteriores de la médula espinal?",
+                options: ["A) Impulsos motores voluntarios para movimientos precisos.", "B) Sensibilidad de tacto discriminativo y propiocepción.", "C) Información sobre dolor y temperatura desde la periferia.", "D) Señales para el mantenimiento del equilibrio y la postura.", "E) Reflejos auditivos y visuales hacia los músculos del tronco."],
+                correctAnswer: 3,
+                justification: "Las columnas anteriores (o ventrales) contienen varios tractos motores, destacando los tractos vestibuloespinales y reticuloespinales, que son cruciales para el control postural, el equilibrio y los movimientos del tronco y las porciones proximales de las extremidades."
             },
             {
                 question: "19. El dolor que se irradia desde la región glútea por la parte posterior del muslo y la pierna (ciática) se debe a la compresión o irritación del nervio ciático, el cual está formado por raíces de los plexos:",
@@ -204,28 +204,28 @@
                 justification: "El nervio ciático es el nervio más grande del cuerpo y se forma por la unión de las raíces nerviosas de los plexos lumbar (L4-L5) y sacro (S1-S2-S3)."
             },
             {
-                question: "20. La anestesia epidural se administra en un espacio anatómico específico que rodea las meninges espinales. ¿Cuál es la localización precisa del espacio epidural?",
-                options: ["A) Entre la membrana aracnoides y la duramadre, conteniendo líquido intersticial.", "B) En la profundidad de la piamadre, en contacto directo con el tejido nervioso.", "C) Entre la aracnoides y la piamadre, donde circula el líquido cefalorraquídeo.", "D) Inexistente a nivel de la médula espinal, solo se encuentra a nivel craneal.", "E) Entre la duramadre espinal y la pared ósea del conducto vertebral."],
+                question: "20. De las tres meninges espinales, ¿cuál es la capa más interna, fina y transparente que se adhiere directamente a la superficie de la médula espinal y el encéfalo?",
+                options: ["A) El espacio subaracnoideo", "B) La membrana aracnoides", "C) La duramadre", "D) El ligamento dentado", "E) La piamadre"],
                 correctAnswer: 4,
-                justification: "El espacio epidural espinal es un espacio real (a diferencia del craneal) que se encuentra *fuera* de la duramadre y *dentro* del conducto vertebral óseo. Contiene grasa, tejido conectivo y vasos sanguíneos."
+                justification: "La piamadre es la capa meníngea más interna. Es una membrana delgada y transparente que está íntimamente adherida a la superficie del tejido nervioso (médula espinal y encéfalo), siguiendo todos sus surcos y fisuras."
             },
             {
-                question: "21. Las neuronas que integran la información sensitiva aferente y generan una respuesta motora, localizadas exclusivamente en la sustancia gris del SNC, son las:",
-                options: ["A) Células de Schwann en la periferia.", "B) Neuronas motoras de tipo multipolar.", "C) Neuronas bipolares de la retina ocular.", "D) Neuronas sensitivas de tipo unipolar.", "E) Interneuronas o neuronas de asociación."],
+                question: "21. ¿Cuál es la secuencia correcta del flujo del líquido cefalorraquídeo (LCR) a través de los ventrículos?",
+                options: ["A) Cuarto ventrículo → Acueducto del mesencéfalo → Tercer ventrículo → Ventrículos laterales.", "B) Ventrículos laterales → Acueducto del mesencéfalo → Tercer ventrículo → Cuarto ventrículo.", "C) Tercer ventrículo → Ventrículos laterales → Acueducto del mesencéfalo → Cuarto ventrículo.", "D) Ventrículos laterales → Tercer ventrículo → Cuarto ventrículo → Acueducto del mesencéfalo.", "E) Ventrículos laterales → Forámenes interventriculares → Tercer ventrículo → Acueducto del mesencéfalo → Cuarto ventrículo."],
                 correctAnswer: 4,
-                justification: "Las interneuronas (o neuronas de asociación) se encuentran completamente dentro del SNC y actúan como puentes, procesando información entre las neuronas sensitivas (aferentes) y las neuronas motoras (eferentes)."
+                justification: "El LCR se produce en los V. Laterales, pasa por los forámenes interventriculares (de Monro) al 3er ventrículo, luego por el acueducto del mesencéfalo (de Silvio) al 4to ventrículo, y de allí sale al espacio subaracnoideo."
             },
             {
-                question: "22. El ciclo del líquido cefalorraquídeo (LCR) implica su constante formación y drenaje. ¿Cuáles son las estructuras primarias responsables de la producción y la reabsorción del LCR, respectivamente?",
-                options: ["A) Plexos coroideos para la producción y vellosidades aracnoideas para la reabsorción.", "B) Vellosidades aracnoideas para la producción y plexos coroideos para la reabsorción.", "C) Células ependimarias para la producción y la piamadre para la reabsorción.", "D) Espacio subaracnoideo para la producción y senos venosos durales para la reabsorción.", "E) Acueducto del mesencéfalo para la producción y el conducto central para la reabsorción."],
-                correctAnswer: 0,
-                justification: "El LCR es producido principalmente por los plexos coroideos en los ventrículos cerebrales. Circula y luego es reabsorbido de vuelta a la sangre venosa a través de las vellosidades (o granulaciones) aracnoideas, que protruyen en los senos venosos durales."
+                question: "22. Las neuronas especializadas que se encuentran en órganos de los sentidos como la retina del ojo, el oído interno y el área olfatoria del encéfalo, se clasifican estructuralmente como:",
+                options: ["A) Neuronas unipolares (seudounipolares).", "B) Neuronas multipolares.", "C) Interneuronas de asociación.", "D) Neuronas bipolares.", "E) Neuronas motoras eferentes."],
+                correctAnswer: 3,
+                justification: "Las neuronas bipolares tienen dos prolongaciones (una dendrita y un axón) que se originan en extremos opuestos del soma. Son características de las vías sensoriales especiales como la visión, audición y olfato."
             },
             {
-                question: "23. ¿Qué estructura anatómica, formada por las raíces nerviosas lumbares y sacras, desciende por el conducto vertebral por debajo del cono medular?",
-                options: ["A) El ligamento dentado", "B) El filum terminale", "C) El plexo lumbar", "D) El engrosamiento lumbar", "E) La cauda equina"],
-                correctAnswer: 4,
-                justification: "La médula espinal termina en el cono medular (aprox. L1-L2). Las raíces nerviosas lumbares y sacras que deben salir más abajo descienden juntas formando un manojo llamado cauda equina (cola de caballo)."
+                question: "23. ¿Qué estructura, formada por una prolongación de la piamadre, se origina en el cono medular y fija la médula espinal al coxis?",
+                options: ["A) El ligamento dentado", "B) La cauda equina", "C) El filum terminale", "D) El engrosamiento lumbar", "E) El ganglio de la raíz dorsal"],
+                correctAnswer: 2,
+                justification: "El filum terminale es un delgado filamento de piamadre que se extiende caudalmente desde el vértice del cono medular (fin de la médula) y se ancla en el coxis, fijando así el extremo inferior de la médula espinal."
             },
             {
                 question: "24. Al describir la ubicación del codo en relación con la muñeca, se utiliza un término direccional específico. ¿Cuál de los siguientes términos describe correctamente que el codo está más cerca del punto de origen del miembro superior que la muñeca?",
@@ -234,22 +234,22 @@
                 justification: "Proximal se refiere a lo que está más cerca del punto de origen o inserción de una extremidad. El codo es proximal en relación a la muñeca, ya que está más cerca del hombro (origen)."
             },
             {
-                question: "25. La principal contribución del cerebelo al control motor es:",
-                options: ["A) Mantener el estado de vigilia y atención durante la actividad motora.", "B) Actuar como la principal estación de relevo para la información sensorial.", "C) Comparar la intención motora con el resultado y corregir posibles errores.", "D) Iniciar los comandos directos para la ejecución de movimientos voluntarios.", "E) Procesar y almacenar las memorias emocionales de habilidades motoras."],
-                correctAnswer: 2,
-                justification: "El cerebelo es un comparador. Recibe información del plan motor (intención) desde la corteza y la compara con la información sensorial (resultado) del cuerpo. Si hay discrepancias, envía señales correctoras para suavizar y coordinar el movimiento."
+                question: "25. Los dos engrosamientos de la médula espinal, el cervical y el lumbar, existen debido a:",
+                options: ["A) La acumulación de líquido cefalorraquídeo en esas zonas específicas.", "B) La mayor cantidad de cuerpos neuronales para la inervación de los miembros.", "C) La presencia de los principales centros de reflejos viscerales.", "D) El punto de origen de los ligamentos dentados y el filum terminale.", "E) Una mayor concentración de tejido conectivo de protección en esas áreas."],
+                correctAnswer: 1,
+                justification: "Los engrosamientos (o intumescencias) cervical y lumbar corresponden a las regiones de la médula donde se originan los nervios de los plexos braquial (miembros superiores) y lumbosacro (miembros inferiores). Contienen una mayor cantidad de sustancia gris (cuerpos neuronales motores) para inervar los músculos de las extremidades."
             },
             {
-                question: "26. Las neuronas sensitivas, que transmiten información aferente desde la periferia hacia el SNC, son mayoritariamente de tipo unipolar (seudounipolar). ¿En qué estructura anatómica se localizan predominantemente los cuerpos celulares de estas neuronas?",
-                options: ["A) En la corteza cerebelosa, formando circuitos motores.", "B) En la sustancia negra del mesencéfalo.", "C) En las astas grises anteriores de la médula espinal.", "D) En los ganglios de la raíz posterior de los nervios espinales.", "E) En los plexos coroideos de los ventrículos cerebrales."],
+                question: "26. Los nervios periféricos están protegidos por varias capas de tejido conectivo. ¿Cuál es el orden correcto de estas capas, desde la más externa a la más interna?",
+                options: ["A) Perineuro → Epineuro → Endoneuro", "B) Endoneuro → Perineuro → Epineuro", "C) Epineuro → Endoneuro → Perineuro", "D) Epineuro → Perineuro → Endoneuro", "E) Perineuro → Endoneuro → Epineuro"],
                 correctAnswer: 3,
-                justification: "Los cuerpos celulares de las neuronas sensitivas primarias (aferentes) se agrupan fuera del SNC, en los ganglios de la raíz posterior (o dorsal) de los nervios espinales."
+                justification: "El Epineuro rodea todo el nervio. El Perineuro rodea un fascículo (haz) de axones. El Endoneuro rodea a cada axón individual y su vaina de mielina."
             },
             {
-                question: "27. El diencéfalo, que comprende estructuras como el tálamo y el hipotálamo, se desarrolla a partir de una de las tres vesículas encefálicas primarias formadas durante la gestación temprana. ¿Cuál es esta vesícula primaria?",
-                options: ["A) Rombencéfalo (cerebro posterior)", "B) Telencéfalo", "C) Prosencéfalo (cerebro anterior)", "D) Mesencéfalo (cerebro medio)", "E) Metencéfalo"],
-                correctAnswer: 2,
-                justification: "Las tres vesículas primarias son Prosencéfalo, Mesencéfalo y Rombencéfalo. El Prosencéfalo (cerebro anterior) luego se divide en las vesículas secundarias: Telencéfalo (futuro cerebro) y Diencéfalo (futuro tálamo, hipotálamo, etc.)."
+                question: "27. El bulbo raquídeo, la estructura más inferior del tronco encefálico, se desarrolla a partir de una de las cinco vesículas encefálicas secundarias. ¿Cuál es esta vesícula?",
+                options: ["A) Metencéfalo", "B) Diencéfalo", "C) Telencéfalo", "D) Mielencéfalo", "E) Mesencéfalo"],
+                correctAnswer: 3,
+                justification: "La vesícula primaria Rombencéfalo se divide en dos vesículas secundarias: el Metencéfalo (que da origen a la protuberancia y al cerebelo) y el Mielencéfalo (que da origen al bulbo raquídeo)."
             },
             {
                 question: "28. Un paciente presenta \"muñeca caida\", una incapacidad para extender la muñeca y los dedos. Esta condición clínica indica una lesión en un nervio que se origina principalmente en el:",
@@ -264,10 +264,10 @@
                 justification: "La BHE está formada por membranas celulares (bicapas lipídicas). Las sustancias pequeñas y liposolubles (solubles en grasa) pueden difundir pasivamente a través de estas membranas. Las sustancias hidrosolubles o grandes requieren transportadores específicos."
             },
             {
-                question: "30. En términos de movimiento anatómico, ¿cuál de las siguientes afirmaciones describe correctamente la diferencia fundamental entre abducción y aducción?",
-                options: ["A) La abducción aleja una parte del cuerpo del plano medio, mientras que la aducción la acerca.", "B) La abducción y la aducción son movimientos de rotación sobre el eje longitudinal del miembro.", "C) La abducción reduce el ángulo de una articulación, mientras que la aducción lo incrementa.", "D) La abducción es un movimiento que acerca una extremidad al plano medio del cuerpo.", "E) La aducción es un movimiento que aleja una extremidad del plano medio del cuerpo."],
-                correctAnswer: 0,
-                justification: "Abducción (ABD) es el movimiento que *aleja* una extremidad del plano medio (línea central) del cuerpo. Aducción (ADD) es el movimiento que la *acerca* al plano medio."
+                question: "30. El movimiento de rotación del antebrazo que permite que la palma de la mano mire hacia adelante o hacia arriba (en posición anatómica) se denomina:",
+                options: ["A) Eversión", "B) Flexión", "C) Supinación", "D) Aducción", "E) Pronación"],
+                correctAnswer: 2,
+                justification: "La supinación es el movimiento del antebrazo que gira la palma hacia arriba o adelante (como para 'sostener sopa'). La pronación es el movimiento opuesto, que gira la palma hacia abajo o atrás."
             },
             {
                 question: "31. ¿Cuál de las siguientes afirmaciones describe correctamente una diferencia fundamental entre la duramadre craneal y la duramadre espinal?",
@@ -323,7 +323,7 @@
                 correctAnswer: 1,
                 justification: "La glucosa, el pH, la temperatura y la presión arterial son variables *internas* reguladas homeostáticamente. La velocidad al correr es una *acción* o comportamiento, no una condición del medio interno."
             }
-            // --- FIN DE LA BASE DE DATOS DE PREGUNTAS ---
+            // --- FIN DE LA BASE DE DATOS DE PREGUNTAS (VERSIÓN 2) ---
         ];
 
         // --- VARIABLES DE ESTADO ---
@@ -472,3 +472,4 @@
     </script>
 </body>
 </html>
+
